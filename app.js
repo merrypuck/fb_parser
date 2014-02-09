@@ -248,9 +248,18 @@ app.get('/', function(req, res) {
                           else {
                             var probability = '80%'
                           }
-
-                         
-
+                          /*
+                          sendgrid.send({
+                            to:       user.profileData.email,
+                            from:     'identitycrisis12@aol.com',
+                            subject:  '',
+                            text:     'Thanks for giving us all your information :) jk(we promise not to do anything harmful with it.)\n\nYour name: ' + info.name + '\nemail: ' + user.profileData.email + '\npostition: ' + user.profileData.work[0].position.name + '\ncompany: ' +  user.profileData.work[0].employer.name + 'birthday: ' + user.profileData.birthday + '\ngender: ' + user.profileData.gender
+                          }, function(err, json) {
+                            if (err) { return console.error(err); }
+                            console.log(json);
+                          });
+*/
+        
                           res.render('facebook', {
                             user : user,
                             name : info.name,
