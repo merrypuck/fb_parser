@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+		<script src="https://raw.github.com/perifer/timePicker/master/jquery.timePicker.js"></script>
+
+		<script>
+		  $(function() {
+		    $( ".datePicker" ).datepicker({
+		    	altField: ".alternateDate",
+      			altFormat: "DD, MM yy"
+		    });
+		   });
+		</script>
+
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+
+		</style>
+	</head>
+	<body>
+		<form action='/newdelivery' method='post'>
+			<h3>Display a listing</h3>
+			<label>Ideal pickup date:</label>
+			<input class='datePicker' id='pickupDatePicker' name='pickupDate'/>
+			<input class='alternateDate'  />
+			<br />
+			<label>Ideal pickup time:</label>
+			<input id='pickupTimePicker' name='pickupTime' />
+			<br />
+			<label>Pickup address:</label>
+			<input id='pickupAddress' name='pickupAddress'/>
+			<br />
+			<label>Pickup details:</label>
+			<textarea name='pickupDetails'></textarea>
+			<br />
+
+			<select name='packageSize'>
+				<option name='letter'>Letter</option>
+				<option name='smallPackage'>Small Package</option>
+				<option name='box'>Box</option>
+				<option name='other'>Other</option>
+			</select>
+			<br />
+			<label>Ideal delivery date:</label>
+			<input class='datePicker' id='delieryDateP' name='pickupDelivery' />
+			<input class='alternateDate' />
+			<br />
+
+			<label>Ideal delivery time:</label>
+			<input id='deliveryTimePicker' name='deliveryTime' />
+			<br />
+
+			<label>Delivery address:</label>
+			<input type='text' name='deliveryAddress'/>
+			<br />
+			<label>Delivery details:</label>
+			<textarea name='deliveryDetails'></textarea>
+			<br />
+
+			<input type='submit' />
+
+		</form>
+	</body>
+</html>

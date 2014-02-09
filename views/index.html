@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+		<title>Wisdomly Login</title>
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+
+			}
+			#background-body {
+				position: absolute;
+				height:100%;
+				width:100%;
+				background-color: #EDEDED;
+			}
+			#top-background-body {
+				position: absolute;
+				top: 0;
+				height: 270px;
+				width:100%;
+				background-color: #4CA5F7;
+				border-bottom: 3px solid #4EA7F9
+			}
+			#bottom-background-body {
+				position: absolute;
+				top: 270px;
+				height:390px;
+				width:100%;
+				background-color: #EDEDED;
+			}
+			#content-header {
+				position: relative;
+				top:20px;
+				background-color:#4CA5F7;
+				margin:0 auto;
+				width: 510px;
+				height:50px;
+				text-align: center;
+				font-family: sans-serif;
+				color: #fff;
+			}
+			#cheader-title {
+				font-weight: 400;
+				font-size:32px;
+				font-family: 'Open Sans', sans-serif;
+			}
+			#cheader-title img {
+				
+				height:60px;
+				width:280.8px;
+				/*4.68 8 */
+			
+			}
+			#cheader-description {
+				line-height: 15px;
+				font-size: 19px;
+				font-family: 'Open Sans', sans-serif;
+				font-weight: 600;
+			}
+			#content {
+				position: relative;
+				top: 80px;
+				border-radius: 5px;
+				border: 1px solid #D1D1D1;
+				margin: 0 auto;
+				height: 450px;
+				width: 510px;
+				background-color: #FFFFFF;
+				}
+			#signin {
+				height:100px;
+				width:510px;
+				text-align: center;
+				font-size: 27px;
+				color: #646464;	
+				font-family: sans-serif;
+				line-height: 90px;
+				font-family: 'Open Sans', sans-serif;
+			}
+
+			#socialLogin {
+				float: left;
+				height: 150px;
+				width: 510px;
+				border-bottom: 1px solid rgba(247, 247, 247, 0.46);
+
+			}
+			#socialLogin ul {
+				list-style: none;
+				margin-left:90px;
+			}
+			#socialLogin ul li {
+				float: left;
+				display: inline;
+				margin-right:10px;
+			}
+			#socialLogin ul li img {
+				height:100px;
+				width:100px;
+				border-radius: 15px;
+				border: 1px solid #C9C9C9;
+			}
+			#socialLogin ul li .socialTitle {
+				font-size: 12px;
+				color: #646464;
+				margin-top: 5px; 
+				font-family: 'Open Sans', sans-serif;
+				text-align: center;
+				font-weight: 600;
+				letter-spacing: 1px;
+			}
+			#login {
+				float: left;
+				height:200px;
+				width:510px;
+				padding-top:30px;
+			}
+			#login form input {
+				margin:10px 0 2px 80px;
+				padding: 0 0 0 5px;
+				height:30px;
+				width:350px;
+				border-radius: 5px;
+				font-size: 14px;
+				font-family: 'Open Sans', sans-serif;
+			}
+			#loginSubmit {
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				border-radius: 5px;
+				padding: 8px 12px 8px 12px;
+				background: #4CA5F7;
+				color: #fff;
+				border: none;
+				box-shadow: none;
+				width: 200px;
+				margin-right: 5%;
+				float: left;
+				font-family: 'Open Sans', sans-serif;
+			}
+
+			#loginSubmit:hover{
+				transition: 0.5s background, 0.5s border-color;
+     			background: #207DCC;
+			}
+
+			input[type="text"], input[type="password"] {
+				-webkit-transition: 0.5s background, 0.5s border-color;
+				-moz-transition: 0.5s background, 0.5s border-color;
+				-ms-transition: 0.5s background, 0.5s border-color;
+				-o-transition: 0.5s background, 0.5s border-color;
+				transition: 0.5s background, 0.5s border-color;
+			}
+			input:focus {
+				 border-color: rgba(46, 159, 255, 0.5);
+				 outline: medium none;
+				 background: rgba(46, 159, 255, 0.1);
+				 -webkit-transition: 0.5s background, 0.5s border-color;
+				 -moz-transition: 0.5s background, 0.5s border-color;
+				 -ms-transition: 0.5s background, 0.5s border-color;
+				 -o-transition: 0.5s background, 0.5s border-color;
+				 transition: 0.5s background, 0.5s border-color;
+			}
+			input,
+			textarea,
+			select,
+			.uneditable-input {
+				 border: 1px solid #a3acb8;
+				 -webkit-border-radius: 3px;
+				 -moz-border-radius: 3px;
+			}
+			#cfooter-text {
+				position: relative;
+				top: 205px;
+				margin: 0 auto;
+				padding-left: 150px;
+				width: 510px;
+				height: 50px;
+				font-family: 'Open Sans', sans-serif;
+				font-size: 13px;
+				text-align: center;
+				color: #4CA5F7;
+			}
+			#cfooter-text a {
+				color: #4CA5F7;
+				text-decoration: none;
+			}
+			#errorMessage {
+				position: absolute;
+				top:245px;
+				left:80px;
+			}
+
+		</style>
+		<script>
+			$(function(){
+				$('#loginSubmit').click(function() {
+					alert('asd');
+					var username = $('#username').val();
+					var password = $('#password').val();
+					if(username.length < 1 || password.length < 1) {
+						$('#errorMessage').html('<b>All fields must be completed.</b>');
+					}
+					else {
+						$('#errorMessage').html('<b>Your username or password is incorrect</b>');
+					}
+					event.preventDefault();
+				});
+			});
+		</script>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		
+		<div id='background-body'>
+			<div id='top-background-body'></div>
+			<br />
+			<div id='bottom-background-body'></div>
+		</div>
+
+		<div id='content-header'>
+			<span id='cheader-title'><img src='/images/logo2.png' /></span>
+			<br />
+			<span id='cheader-description'>Virtual Events, Meetups, and Conferences</span>
+		</div>
+		<div id='content'>
+			<div id='signin'>Tigerlabs Demo Day 2013</div>
+			<div id='socialLogin'>
+				<ul style="">
+					<li>
+						<a href='/auth/linkedin'>
+							<img src='http://www.clixmarketing.com/blog/wp-content/uploads/2013/06/linkedin-icon.png' /> 
+						</a>
+						<div class='socialTitle'>LINKEDIN</div>
+					</li>
+					</a>
+					
+					<li>
+						<!-- https://www.facebook.com/dialog/oauth?client_id=1405415783045648&redirect_uri=http://localhost:5000/login/callback&response_type=code%20token&scope=email,user_about_me,user_birthday,user_photos,user_website -->
+						<a href='<%= loginUrl %>'>
+							<img src='https://si0.twimg.com/profile_images/421337650/Peace_Logo.jpg' /> 
+						</a>
+						<div class='socialTitle'>ANGELLIST</div>
+						
+					</li>
+
+					<li>
+						<a href='/auth/twitter'>
+							<img src='http://marketingland.com/wp-content/ml-loads/2012/06/new-twitter-logo.png' /> 
+						</a>
+						<div class='socialTitle'>TWITTER</div>
+						
+					</li>
+				</ul>
+
+			
+
+			<div id='login'>
+				<form action='/login' method='post'>
+					<input type='text' name='username' id='username' placeholder='Email or Username'/>
+					<input type='password' name='password' id='password' placeholder='Password' />
+					<center><input type='submit' id='loginSubmit' style='width: 150px;margin-left: 180px;'/>				</form>
+
+			</div>
+
+		</div>
+		<div id='errorMessage'>
+			
+			</div>
+
+	<span id='cfooter-text'><a href='http://wisdom.ly' target='_blank'>Use Wisdomly for your own Event </a></span>
+
+
+
+
+		<!--<a href="/auth/linkedin"><img src='http://developer.linkedin.com/sites/default/files/js-signin.png'/></a>
+		
+		<a href="/auth/twitter">Twitter Login</a>-->
+
+		
+	</body>
+</html>

@@ -1,0 +1,191 @@
+<% if(profileData) { 
+
+	%>
+	
+	<!DOCTYPE html>
+<!-- saved from url=(0043)http://coenraets.org/directory/#employees/1 -->
+<html class="wf-sourcesanspro-n4-active wf-sourcesanspro-i4-active wf-sourcesanspro-i7-active wf-sourcesanspro-n7-active wf-active"><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+
+<script id="tinyhippos-injected">if (window.top.ripple) { window.top.ripple("bootstrap").inject(window, document); }</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Facebook Conquerer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://coenraets.org/directory/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="http://coenraets.org/directory/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="http://coenraets.org/directory/css/styles.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="http://use.edgefonts.net/c/0ad1a6/source-sans-pro:i4:i7:n4:n7.Xw2:N:2,Xvz:N:2,Xw5:N:2,Xvy:N:2/d"><script src="./Employee Directory_files/source-sans-pro.js"></script>
+
+</head>
+
+<body><div><div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="http://coenraets.org/directory/#">Identity Crisis</a>
+
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class="home-menu"><a href="http://coenraets.org/directory/#">Home</a></li>
+                    <li class="contact-menu"><a href="http://coenraets.org/directory/#contact">Contact</a></li>
+                </ul>
+                <form class="navbar-search pull-right dropdown">
+                    <input id="searchText" type="search" class="search-query dropdown-toggle" placeholder="Search" autocomplete="off">
+                <ul class="dropdown-menu"><li><a href="./Employee Directory_files/Employee Directory.html">
+    <img width="50" height="50" src="./Employee Directory_files/James_King50.jpg" style="float:left;margin-right: 10px;">\
+    <p class="list-item"></p>
+</a></li>
+
+	<% for(var i=0; i < friendsList.length; i++) { %>
+
+		<li>
+			<a href="https://graph.facebook.com/<%=friendsList[i].id %>/?access_token=CAATZBN9yCmhABAOQYTlI4QSiH8aO9gCP7ZCsAVycAL5nWHsZBveLtpn21ZC91cqu9WVpSZCVj5S5GnxWN6MSOr99awd0F7enJANmmKASbIu2cHk8ASZBVQY9gL7getxMeM0ftXgw2GqggGZAC7TRH2QGXQgxt8VBDneZAjZAFphZAmPzDsfRpwGK80QOuYhLNizmcZD" target="_">
+	    	<img width="50" height="50" src="<%=friendsList[i].picture.data.url %>" style="float:left;margin-right: 10px;">
+	    	<p class="list-item"><%= friendsList[i].name %></p>
+			</a>
+		</li>
+    <% } %>
+
+
+	</ul></form>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <br>
+
+    <div class="row-fluid">
+        <div class="span12" id="content"><div><div id="details" class="span7"><div><p><img src="<%= picture %> " width="160" height="160"></p>
+        	<div id='right11' style='float:right;'>
+        		<table class="table table-striped">
+            
+            <tbody>
+            <tr>
+                <td>Amount of Friends:</td>
+                <td><i class="icon-home"></i> <%= amtOfFriends %></td>
+            </tr>
+            <tr>
+                <td>Recent Likes:</td>
+                <td><i class="icon-home"></i> <%= amtOfLikes %></td>
+            </tr>
+            <tr>
+                <td>Movie Likes: </td>
+                <td><i class="icon-headphones"><a href="<%= fbLink %>"></i> <%= amtOfMovies %></a></td>
+            </tr>
+            <tr>
+                <td>Music Likes:</td>
+                <td><i class="icon-envelope"></i> <a href="mailto:<%= email %>"><%= amtOfMusic %></a></td>
+            </tr>
+            <tr>
+                <td>Photo Tags:</td>
+                <td><i class="icon-retweet"></i> <a href=""><%= photoTags %></a></td>
+            </tr>
+            <tr>
+                <td>Probability of valid Account:</td>
+                <td><i class="icon-retweet"></i> <a href=""><%= probability %></a></td>
+            </tr>
+        	</tbody></table>
+
+        	</div>
+<h3><%= name %> </h3>
+<h4><%= position %> at <%= company %> </h4>
+<h4>Facebook Verified: </h4> <div style='color:blue'><%= verified %></div>
+
+<br>
+        <table class="table table-striped">
+            
+            <tbody>
+            <tr>
+                <td>Gender:</td>
+                <td><i class="icon-home"></i> <%= gender %></td>
+            </tr>
+            <tr>
+                <td>Birthday:</td>
+                <td><i class="icon-home"></i> <%= birthday %></td>
+            </tr>
+            <tr>
+                <td>Facebook URL:</td>
+                <td><i class="icon-headphones"><a href="<%= fbLink %>"></i> <%= fbLink %></a></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><i class="icon-envelope"></i> <a href="mailto:<%= email %>"><%= email %></a></td>
+            </tr>
+            <tr>
+                <td>Website:</td>
+                <td><i class="icon-retweet"></i> <a href=""><%= website %></a></td>
+            </tr>
+            <tr>
+                <td>Hometown:</td>
+                <td><i class="icon-retweet"></i> <a href=""><%= hometown %></a></td>
+            </tr>
+        </tbody></table>
+
+        
+</div></div>
+<div class="span5">
+    <div id="reports" class="well">
+        <h3 class="modal-header">Direct Reports</h3>
+
+        <div class="alert alert-info no-reports">
+            <h4 class="alert-heading">Info</h4>
+            James King has no direct reports
+        </div>
+    <ul class="nav nav-list">
+	<% for(var i=0; i < friendsList.length; i++) { %>
+
+		<li>
+			<a href="https://graph.facebook.com/<%=friendsList[i].id %>/?access_token=CAATZBN9yCmhABAOQYTlI4QSiH8aO9gCP7ZCsAVycAL5nWHsZBveLtpn21ZC91cqu9WVpSZCVj5S5GnxWN6MSOr99awd0F7enJANmmKASbIu2cHk8ASZBVQY9gL7getxMeM0ftXgw2GqggGZAC7TRH2QGXQgxt8VBDneZAjZAFphZAmPzDsfRpwGK80QOuYhLNizmcZD" target="_">
+	    	<img width="50" height="50" src="<%=friendsList[i].picture.data.url %>" style="float:left;margin-right: 10px;">
+	    	<p class="list-item"><%= friendsList[i].name %></p>
+			</a>
+		</li>
+    <% } %>
+
+</ul></div>
+</div>
+</div></div>
+    </div>
+
+    <hr>
+
+    <footer>
+        <p>© Christophe Coenraets 2013. <a href="http://twitter.com/ccoenraets">Follow me</a> on Twitter.</p>
+    </footer>
+
+</div></div></body></html>
+			
+<% } else { %>
+
+
+
+
+
+<style>
+	#facebookLogin {
+		width:400px;
+		margin: 100px auto 0 auto;
+}
+</style>
+<div id='facebookLogin'>
+	<h1 style='font-size:45px;font-family:sans-serif; font-weight:600'>Identity Crisis</h1>
+	<h2>(Facebook Conquerer)</h2>
+	<a href='https://www.facebook.com/dialog/oauth?response_type=code&amp;scope=email%2C%20user_about_me%2C%20user_activities%2C%20user_birthday%2C%20user_checkins%2C%20user_education_history%2C%20user_hometown%2C%20user_interests%2C%20user_likes%2C%20user_location%2C%20user_photos%2C%20user_questionsuser_website%2C%20user_work_history%2C%20friends_about_me%2C%20friends_activitiesfriends_education_history%2C%20friends_hometown%2C%20friends_interests%2C%20friends_likes%2C%20friends_location%2C%20friends_photos%2C%20friends_website%2C%20friends_work_history%2C%20read_friendlists&amp;redirect_uri=http%3A%2F%2Flocalhost%3A5000%2Flogin%2Fcallback&amp;client_id=1405415783045648'>
+		<img src='/images/facebook.png' height='280px'/>
+	</a>
+</div>
+<% } %>
+

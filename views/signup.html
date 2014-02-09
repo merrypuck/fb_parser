@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<title>SIGNUP</title>
+		<style>
+			* {
+				margin:0;
+				padding:0;
+			}
+			body {
+				background-image:url('images/tiny_grid2.png');
+				background-size: 2%;
+				margin:0 auto;
+			}
+			form {
+				height:800px;
+				width:400px;
+				margin:0 auto;
+				text-align: left;
+				background-color: #fff;
+
+			}
+		</style>	
+	</head>
+		<body>
+			<div id='signupForm'>
+				
+				<form action='\signup' method='post'>
+					<h3>Personal Information</h3>
+					<label>First Name:</label>
+					<input type='text' name='firstName'/>
+					<br />
+					<label>Last Name:</label>
+					<input type='text' name='lastName'/>
+					<br />
+					<label>Zip:</label>
+					<input type='text' name='zip'/>
+					<br />
+					<label>Email:</label>
+					<input type='text' name='email'/>
+					<br />
+					<label>Password:</label>
+					<input type='password' name='password'/>
+					<br />
+					<br />
+
+					<h3>Organizational Information</h3>
+					<label>Company name:</label>
+					<input type='text' name='companyName'/>
+					<br />
+					<label>Address:</label>
+					<input type='text' name='companyAddress'/>
+					<br />
+					<label>Phone number:</label>
+					<input type='text' name='companyNumber'/>
+					<br />
+					<br />
+					<h3>Billing Information</h3>
+					<label>First Name:</label>
+					<input type='text' name='billingFirstName'/>
+					<br />
+					<label>Last Name:</label>
+					<input type='text' name='billingLastName'/>
+					<br />
+					<label>Address:</label>
+					<input type='text' name='billingAddress'/>
+					<br />
+					<label>Zip:</label>
+					<input type='text' name='billingZip'/>
+					<br />
+					<label>CC #:</label>
+					<input type='text' name='billingCreditCard'/>
+					<br />
+					<label>Expiration Date:</label>
+					<input type='text' name='billingExpiration'/>
+					<br />
+					<label>Pin:</label>
+					<input type='text' name='billingPin'/>
+					<br />
+
+					<input type='submit' />
+				</form>
+			</div>
+		</body>
+
+</html>

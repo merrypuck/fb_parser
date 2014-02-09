@@ -1,0 +1,265 @@
+<html>
+	<head>
+		<title>Shipping</title>
+				<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+
+			}
+			body {
+				background-image:url('images/tiny_grid2.png');
+				background-size: 2%;
+			}
+			#content {
+				background-color: #4CA5F7;
+			}
+			#content-header {
+				position: relative;
+				top:20px;
+				margin:0 auto;
+				width: 510px;
+				height:50px;
+				text-align: center;
+				font-family: sans-serif;
+				color: #333636;
+				font-size:30px;
+			}
+			#cheader-title {
+				font-weight: 400;
+				font-size:32px;
+				font-family: 'Open Sans', sans-serif;
+			}
+			#cheader-title img {
+				
+				height:60px;
+				width:280.8px;
+				/*4.68 8 */
+			
+			}
+			#cheader-description {
+				line-height: 15px;
+				font-size: 25px;
+				font-family: 'Open Sans', sans-serif;
+				font-weight: 600;
+			}
+			#content {
+				position: relative;
+				top: 80px;
+				border-radius: 5px;
+				border: 1px solid #D1D1D1;
+				margin: 0 auto;
+				height: 450px;
+				width: 510px;
+				background-color: #FFFFFF;
+				}
+			#signin {
+				height:100px;
+				width:510px;
+				text-align: center;
+				font-size: 27px;
+				color: #646464;	
+				font-family: sans-serif;
+				line-height: 90px;
+				font-family: 'Open Sans', sans-serif;
+
+			}
+
+			#socialLogin {
+				float: left;
+				height: 150px;
+				width: 510px;
+				border-bottom: 1px solid rgba(247, 247, 247, 0.46);
+
+			}
+			#socialLogin ul {
+				list-style: none;
+				margin-left:90px;
+			}
+			#socialLogin ul li {
+				float: left;
+				display: inline;
+				margin-right:10px;
+			}
+			#socialLogin ul li img {
+				height:100px;
+				width:100px;
+				border-radius: 15px;
+				border: 1px solid #C9C9C9;
+			}
+			#socialLogin ul li .socialTitle {
+				font-size: 12px;
+				color: #646464;
+				margin-top: 5px; 
+				font-family: 'Open Sans', sans-serif;
+				text-align: center;
+				font-weight: 600;
+				letter-spacing: 1px;
+			}
+			#login {
+				float: left;
+				height:200px;
+				width:510px;
+				padding-top:30px;
+			}
+			#login form input {
+				margin:10px 0 2px 80px;
+				padding: 0 0 0 5px;
+				height:30px;
+				width:350px;
+				border-radius: 5px;
+				font-size: 14px;
+				font-family: 'Open Sans', sans-serif;
+			}
+			#loginSubmit {
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				border-radius: 5px;
+				padding: 8px 12px 8px 12px;
+				background: #4CA5F7;
+				color: #fff;
+				border: none;
+				box-shadow: none;
+				width: 200px;
+				margin-right: 5%;
+				float: left;
+				font-family: 'Open Sans', sans-serif;
+			}
+
+			#loginSubmit:hover{
+				transition: 0.5s background, 0.5s border-color;
+     			background: #207DCC;
+			}
+
+			input[type="text"], input[type="password"] {
+				-webkit-transition: 0.5s background, 0.5s border-color;
+				-moz-transition: 0.5s background, 0.5s border-color;
+				-ms-transition: 0.5s background, 0.5s border-color;
+				-o-transition: 0.5s background, 0.5s border-color;
+				transition: 0.5s background, 0.5s border-color;
+			}
+			input:focus {
+				 border-color: rgba(46, 159, 255, 0.5);
+				 outline: medium none;
+				 background: rgba(46, 159, 255, 0.1);
+				 -webkit-transition: 0.5s background, 0.5s border-color;
+				 -moz-transition: 0.5s background, 0.5s border-color;
+				 -ms-transition: 0.5s background, 0.5s border-color;
+				 -o-transition: 0.5s background, 0.5s border-color;
+				 transition: 0.5s background, 0.5s border-color;
+			}
+			input,
+			textarea,
+			select,
+			.uneditable-input {
+				 border: 1px solid #a3acb8;
+				 -webkit-border-radius: 3px;
+				 -moz-border-radius: 3px;
+			}
+			#cfooter-text {
+				position: relative;
+				top: 205px;
+				margin: 0 auto;
+				padding-left: 150px;
+				width: 510px;
+				height: 50px;
+				font-family: 'Open Sans', sans-serif;
+				font-size: 13px;
+				text-align: center;
+				color: #4CA5F7;
+			}
+			#cfooter-text a {
+				color: #4CA5F7;
+				text-decoration: none;
+			}
+			#errorMessage {
+				position: absolute;
+				top:245px;
+				left:80px;
+			}
+			#signup {
+				font-size: 16px;
+				color: #5FB4B8;	
+				font-family: sans-serif;
+				line-height: 50px;
+				font-family: 'Open Sans', sans-serif;
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id='content-header'>
+			<span id='cheader-title'>SHIPPING</span>
+			<br />
+			<span id='cheader-description'>Fast, easy, and accessible!</span>
+		</div>
+		<div id='content'>
+			<div id='signin'>Sign in here:</div>
+			<div id='socialLogin'>
+				<ul style="">
+					<li>
+						<a href='/auth/linkedin'>
+							<img src='http://www.clixmarketing.com/blog/wp-content/uploads/2013/06/linkedin-icon.png' /> 
+						</a>
+						<div class='socialTitle'>LINKEDIN</div>
+					</li>
+					</a>
+					
+					<li>
+						<a href='/auth/facebook'>
+							<img src='http://newsroom.fb.com/display-media/4406/4' /> 
+						</a>
+						<div class='socialTitle'>FACEBOOK</div>
+						
+					</li>
+
+					<li>
+						<a href='/auth/twitter'>
+							<img src='http://marketingland.com/wp-content/ml-loads/2012/06/new-twitter-logo.png' /> 
+						</a>
+						<div class='socialTitle'>TWITTER</div>
+						
+					</li>
+				</ul>
+			<style>
+				#username {
+					border-left:none;
+					border-right:none;
+					border-top:none;
+					border-radius:0;
+				}
+				#password {
+					border-left:none;
+					border-right:none;
+					border-top:none;
+					border-radius:0;
+				}
+				form input {
+					border-radius:0;
+				}
+			</style>
+			
+
+			<div id='login'>
+				
+				<form action='/login' method='post'>
+					<center><% if(error) { %>
+					<h6> <%= error %> </h6>
+					<%} %></center>
+					<input type='text' name='email' id='username' placeholder='Email'/>
+					<input type='password' name='password' id='password' placeholder='Password' />
+					<center><input type='submit' id='loginSubmit' style='width: 150px;margin-left: 180px;'/>
+					<a id="signup" href='/signup'>Sign up</a>
+
+				</form>
+
+
+			</div>
+
+		</div>
+
+	</body>
+</html>

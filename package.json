@@ -1,0 +1,21 @@
+{
+  "name": "shiiping",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "latest",
+    "ejs" : "latest",
+    "mongoose": "latest",
+    "mime": "latest",
+    "connect": "latest",
+    "sendgrid": "latest"
+  },
+  "description": "Shiiping core",
+  "main": "app.js",
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {},
+  "author": "Aaron Landy",
+  "license": "BSD"
+}

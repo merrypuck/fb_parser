@@ -1,0 +1,88 @@
+<html>
+<head>
+		<script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXnuaZyLmhwVQHew76QVU5-UD0XBmNc5s&sensor=true">
+    </script>
+<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">	
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>	
+		<style type="text/css">
+
+			*{
+				margin: 0 auto;
+			}
+			body {
+				background-image:url('images/tiny_grid2.png');
+				background-size: 2%;
+			}
+			#header {
+				height:50px;
+				width:100%;
+				border-bottom: 2px solid #dadada;
+			}
+			#logo {
+				height:30px;
+				width:80px;
+				font-size: 20px;
+				float: left;
+				border: 2px solid #dadada;
+				text-align: center;
+				line-height: 30px;
+				margin:10px 0 0 10px;
+				color: #646464;	
+				font-family: 'Open Sans', sans-serif;
+				text-decoration: none;
+			}
+			#navigation {
+				margin:15px 15px 0 0;
+				float:right;
+			}
+			#navigation ul {
+				list-style: none;
+			}
+			#navigation ul li {
+				display: inline;
+			}
+			#createNew {
+				height:40px;
+				width:100px;
+				border-radius: 3px;
+				border: 1px solid #dadada;
+				text-decoration: none;
+			}
+			.post {
+				border:1px solid black;
+				width:100%;
+				padding:10px 0 0 20px;
+			}
+			.map-canvas {
+				float: right;
+			}
+			.fa-user {
+				font-size: 30px;
+				border-left: 1px solid black;
+				padding: 0 0 0 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id='header'><a id='logo' href='/'>Shiiping</a>
+				<div id='navigation'>
+					<ul>
+				<li>
+					<a id='createNew' href='/newdelivery'>Create new</a>
+					
+				</li>
+				<li>
+					<a href='profile'><i class="fa fa-user"></i><%= user.firstName %> <%= user.lastName %></a>
+				</li>
+
+			</ul>
+				</div>
+		</div>
+			<h2>Id:</h2> <%= user._id %>
+			<h2>First name:</h2> <%= user.firstName %>
+			<h2>Last name: </h2><%= user.lastName %>
+			<h2>Address:</h2> <%= user.address %>
+			<h2>Email: </h2><%= user.email %>
+	</body>
+</html>
