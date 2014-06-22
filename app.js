@@ -111,7 +111,7 @@ var mongoose = require('mongoose');
 // mongoose.connect('mongodb://localhost/tickfinity');
 
 // For testing production:
-mongoose.connect('mongodb://localhost/fbenv');
+mongoose.connect('mongodb://user:user123@kahana.mongohq.com:10055/fbenv');
 
 var db = mongoose.connection;
 
